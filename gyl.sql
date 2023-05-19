@@ -13,7 +13,9 @@ create table if not exists Usuarios(
  clave varchar(10)
 );
 
-select * from Usuarios;
+
+
+
 
 insert into Usuarios values(
 12345,"juan","gomez",3815201598,"juangomez@gmail.com","juan213"
@@ -32,7 +34,7 @@ insert into Usuarios values(
 );
 
 insert into Usuarios values(
-874563210,"federico","garcia",3841222980,"federicogarcia@gmail.com","federico980"
+874553210,"federico","garcia",3841222980,"federicogarcia@gmail.com","fede980"
 );
 
 insert into Usuarios values(
@@ -46,6 +48,32 @@ insert into Usuarios values(
 insert into Usuarios values(
 22541247,"roberto","albarracin",3841324897,"robertalbarr@gmail.com","robert897"
 );
+
+select * from Usuarios;
+
+select  nombre apellido from Usuarios;
+
+select  nombre, apellido,celular,correo,clave from Usuarios;
+
+set sql_safe_updates=0;
+
+delete from Usuarios where nombre= "roberto";
+
+delete from Usuarios where nombre like "%fer%";
+
+delete from Usuarios where nombre like "%via";
+
+delete from Usuarios where apellido like "gar%";
+
+delete from Usuarios where id = 874563210;
+
+delete from Usuarios where id between 874553210 and 874563210;
+
+
+
+
+
+
 
 
 
